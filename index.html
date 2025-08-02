@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Téléchargement de PDF sur l'IA</title>
+        <link rel="stylesheet" href="style.css" />
+        <script>
+            function showNotif(fileName) {
+                const notif = document.getElementById('notif');
+                notif.textContent = `📥 Téléchargement : ${fileName}`;
+                notif.style.display = 'block';
+                setTimeout(() => {
+                    notif.style.display = 'none';
+                }, 1500);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="notif" class="notif"></div>
+        <div class="container">
+            <h1>📚 Téléchargez nos Guides sur l'Intelligence Artificielle</h1>
+            <p>
+                Ces PDF vous permettront d’approfondir vos connaissances en IA
+                et vous serviront de guide si votre intention est d’en apprendre
+                plus sur l’IA.<br />
+                <span style="font-size: 1.5em">🤖✨</span>
+            </p>
+            <div class="button-container">
+                <a
+                    href="pdf/LE GUIDE ULTIME DE L'IA 2023.pdf"
+                    class="download-button"
+                    download
+                    onclick="showNotif(`LE GUIDE ULTIME DE L'IA 2023.pdf`)"
+                    >📄 LE GUIDE ULTIME DE L'IA 2023.pdf</a
+                >
+                <a
+                    href="pdf/GPT_IA.pdf"
+                    class="download-button"
+                    download
+                    onclick="showNotif('GPT_IA.pdf')"
+                    >📄 GPT_IA.pdf</a
+                >
+                <a
+                    href="pdf/Comprendre_l_IA_en_15_minutes_Guide_essentiel_sur_l_Intelligence.pdf"
+                    class="download-button long-title"
+                    download
+                    onclick="showNotif('Comprendre_l_IA_en_15_minutes_Guide_essentiel_sur_l_Intelligence.pdf')"
+                >
+                    📄 Comprendre_l_IA_en_15_minutes_<br />Guide_essentiel_sur_l_Intelligence.pdf
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
